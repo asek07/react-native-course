@@ -1,14 +1,15 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Header from './components/Header';
+import AlmbumList from './components/AlbumList';
 
 
-export default class App extends React.Component {
+export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-      <Header headerText={'Home'} />
-        <Text>Open up App.js to start working on your app!</Text>
+        <Header headerText={'Home'} />
+        <AlmbumList />
       </View>
     );
   }
@@ -16,7 +17,7 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    // backgroundColor: '#fff',
-    marginTop: 28
+    marginTop: 28,
+    flex: 1
   },
 });
